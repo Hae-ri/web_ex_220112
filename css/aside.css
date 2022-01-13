@@ -1,12 +1,13 @@
-/* 왼쪽 메뉴 */
+/** aside CSS 왼쪽 메뉴 **/
 
 aside {
     width:200px;
     float:left;
 }
 
+/* 로그인 박스 */
 aside #login_box {
-    width:180px;
+    width:190px;
     height:120px;
     border:solid 1px #dddddd;
     border-radius:10px;
@@ -45,6 +46,7 @@ aside #login_input li{
      margin:2px 0 0 0;
 }
 
+/* 방명록 */
 aside #guestbook {
     width:190px;
     height:140px;
@@ -69,4 +71,31 @@ aside #guestbook_title {
     margin:0 0 0 10px;
     border-bottom:solid 1px #cccccc;
     width:165px;
+}
+
+/* 서브 메뉴 */
+aside #sub_menu{
+    margin:15px 0 0 0 ;
+    width:190px;
+    height:320px;
+    background-image:url("../img/sub_menu_bg.png");
+    background-repeat:no-repeat;
+}
+
+aside #sub_menu ul {
+    padding:80px 0 0 30px;
+}
+
+aside #sub_menu li {
+    margin-top:10px;
+}
+
+/* 서브 배너 */
+aside #sub_banner {
+    width:190px;
+    height:160px;
+    margin-top:15px;
+    border:solid 1px #cccccc;
+    border-radius:10px;
+    padding:5px 0 0 5px;
 }
