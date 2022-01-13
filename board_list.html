@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/aside.css">
+    <link rel="stylesheet" type="text/css" href="css/board_list.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
 
@@ -51,22 +52,9 @@
 
             </article><!--login_box-->
 
-            <!-- 방명록 주석처리
-            <article id="guestbook">
-                <div id="guestbook_title">
-                    <img src="img/ttl_memo.gif">
-                </div>
-                <ul>
-                    <li>안녕하세요.</li>
-                    <li>안녕하세요.</li>
-                    <li>안녕하세요.</li>
-                    <li>안녕하세요.</li>
-                </ul>
-            </article>
-            -->
             <nav id="sub_menu"> <!--서브 메뉴 시작-->
                 <ul>
-                    <li>+ 자유 게시판</li>
+                    <li><a href="board_list.html">+ 자유 게시판</a></li>
                     <li>+ 방명록</li>
                     <li>+ 공지사항</li>
                     <li>+ 등업요청</li>
@@ -84,113 +72,64 @@
         </aside><!--aside 끝-->
 
         <main><!--main 시작-->
-            <img src="img/main_img.png">
-            <section id="notice_free_youtube"> <!--공지사항/자유게시판/유투브 시작-->
-                <article id="notice"> <!--공지사항 시작-->
-                    <div class="latest_title">
-                        <img class="latest_img" src="img/latest1.gif">
-                        <img class="more_img" src="img/more.gif">
-                        <div class="clear"></div>
-                    </div>
-                    <div class="latest_content">
-                        <img class="book_img" src="img/book_pen.gif">
-                        <ul class="list">
-                            <li>
-                                <div class="subject">루바토 개편과 사이트 이용...</div>
-                                <div class="date">2021-01-12</div>
-                                <div class="clear"></div>
-                            </li>
-                            <li>
-                                <div class="subject">루바토 개편과 사이트 이용...</div>
-                                <div class="date">2021-01-12</div>
-                                <div class="clear"></div>
-                            </li>
-                            <li>
-                                <div class="subject">루바토 개편과 사이트 이용...</div>
-                                <div class="date">2021-01-12</div>
-                                <div class="clear"></div>
-                            </li>
-                            <li>
-                                <div class="subject">루바토 개편과 사이트 이용...</div>
-                                <div class="date">2021-01-12</div>
-                                <div class="clear"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </article><!--notice/공지사항 끝-->
-
-                <article id="free"> <!--자유게시판 시작-->
-                        <div class="latest_title">
-                            <img class="latest_img" src="img/latest2.gif">
-                            <img class="more_img" src="img/more.gif">
-                            <div class="clear"></div>
+            <img src="img/comm.gif">
+            <h2 id="board_title">자유 게시판</h2>
+            <div id="total_search"><!--게시물 검색 시작-->
+                <div id="total">▷ 총 3개의 게시물이 있습니다. </div>
+                <div id="search"><!-- 게시물 검색줄 시작 -->
+                    <div>
+                        <img id="select_img" src="img/select_search.gif">
+                        <div id="search_select">
+                            <select>
+                                <option>제목</option>
+                                <option>내용</option>
+                                <option>글쓴이</option>
+                            </select>
                         </div>
-                        <div class="latest_content">
-                            <img class="book_img" src="img/book_pen.gif">
-                            <ul class="list">
-                                <li>
-                                    <div class="subject">까스통님의 선물인 보드카...</div>
-                                    <div class="date">2021-12-12</div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li>
-                                    <div class="subject">까스통님의 선물인 보드카...</div>
-                                    <div class="date">2021-12-12</div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li>
-                                    <div class="subject">까스통님의 선물인 보드카...</div>
-                                    <div class="date">2021-12-12</div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li>
-                                    <div class="subject">까스통님의 선물인 보드카...</div>
-                                    <div class="date">2021-12-12</div>
-                                    <div class="clear"></div>
-                                </li>
-                            </ul>
-                        </div>
-                </article><!--free/자유게시판 끝-->
-
-                <article id="youtube"><!--유투브 시작-->
-                    <div class="latest_title">
-                        <img class="latest_img" src="img/latest3.gif">
-                        <img class="more_img" src="img/more.gif">
-                        <div class="clear"></div>
+                        <div id="search_input"><input type="text"></div>
+                        <div id="search_button"><img src="img/search_button.gif"></div>
                     </div>
-                        <img id="youtube_img" src="img/bach.jpg">
-                </article><!--youtube/유투브 끝-->
-            </section> <!--공지사항/자유게시판/유투브 끝-->
+                </div><!-- 게시물 검색줄 끝 -->
+            </div><!--게시물 검색 끝-->
 
-            <section id="gallery"> <!--갤러리 시작 -->
-                <img src="img/latest4.gif">
-                    <div id="gallery_box"> <!--갤러리 박스 시작-->
-                        <div id="gallery_list"> <!--갤러리 리스트 시작-->
+            <table><!--게시물 목록 테이블 시작-->
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>일시</th>
+                    <th>조회수</th>
+                </tr>
+                <tr>
+                    <td class="col1">1</td>
+                    <td class="col2"><a href="board_view.html">까스통님의 선물인 보드카가 엄청 독하네요.</a></td>
+                    <td class="col3">루바토</td>
+                    <td class="col4">2022-01-12</td>
+                    <td class="col5">10</td>
+                </tr>
+                <tr>
+                    <td class="col1">2</td>
+                    <td class="col2"><a href="board_view.html">까스통님의 선물인 보드카가 엄청 독하네요.</a></td>
+                    <td class="col3">루바토</td>
+                    <td class="col4">2022-01-12</td>
+                    <td class="col5">10</td>
+                </tr>
+                <tr>
+                    <td class="col1">3</td>
+                    <td class="col2"><a href="board_view.html">까스통님의 선물인 보드카가 엄청 독하네요.</a></td>
+                    <td class="col3">루바토</td>
+                    <td class="col4">2022-01-12</td>
+                    <td class="col5">10</td>
+                </tr>
+            </table><!--게시물 목록 테이블 끝-->
+            <div id="move_page"><!-- 게시판 페이지 이동 버튼 시작-->
+                <div class="prev_next">◀ 이전페이지 | 다음페이지 ▶</div>
+                <div class="list_write">
+                    <img src="img/list.png">
+                    <img src="img/write.png">
+                </div>
+            </div><!-- 게시판 페이지 이동 버튼 끝-->
 
-                            <div class="items"><!--사진&설명 1세트-->
-                                <ul>
-                                    <li><img src="img/img1.jpg"></li>
-                                    <li>기타 페스티벌 4중주</li>
-                                </ul>
-                            </div><!--사진&설명 1세트-->
-
-                            <div class="items"><!--사진&설명 1세트-->
-                                <ul>
-                                    <li><img src="img/img1.jpg"></li>
-                                    <li>기타 페스티벌 4중주</li>
-                                </ul>
-                            </div><!--사진&설명 1세트-->
-
-                            <div class="items"><!--사진&설명 1세트-->
-                                <ul>
-                                    <li><img src="img/img1.jpg"></li>
-                                    <li>기타 페스티벌 4중주</li>
-                                </ul>
-                            </div><!--사진&설명 1세트-->
-
-                        </div><!--gallery_list/갤러리 리스트 시작-->
-                    </div><!--gallery_box/갤러리 박스 끝-->
-            </section> <!--gallery/갤러리 끝 -->
         </main><!--main 끝-->
 
         <div class="clear"></div>
