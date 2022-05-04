@@ -19,8 +19,8 @@ main table .subject_view {
     width:500px;
 }
 
-main table #subject_col1 {
-    text-align:left;
+main table .col1 {
+    background-color:#eeeeee;
 }
 
 main table #subject_col2 {
