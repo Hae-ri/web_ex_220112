@@ -23,6 +23,11 @@ main table .col1 {
     background-color:#eeeeee;
 }
 
+main table .col1 textarea {
+    width:500px;
+    height:70px;
+}
+
 main table #subject_col2 {
     margin-left:250px;
     text-align:right;
